@@ -19,5 +19,6 @@ public class MyWorld extends World
         super(1000, 800, 1); 
         addObject( new cab(), 500,150 );
         addObject( new Pompei(), 500,700 );
+
     }
 }
