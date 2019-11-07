@@ -14,6 +14,7 @@ public class cab extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int flag = 0;
+    int count = 0;
     Random r = new Random();
     public void act() 
     {
@@ -27,9 +28,17 @@ public class cab extends Actor
         }
         
         if(flag == 1){
-            setLocation(x-1, y+r.nextInt(5)-r.nextInt(5));
+            setLocation(x-1, y+r.nextInt(15)-r.nextInt(15));
         }else if(flag == 0){
-            setLocation(x+1, y+r.nextInt(5)-r.nextInt(5));
+            setLocation(x+1, y+r.nextInt(15)-r.nextInt(15));
+        }
+        
+        Actor actor = getOneObjectAtOffset(0, 0, Bullet.class);
+        if(actor != null){
+            count++;
+        }
+        if(count == 30){
+            getWorld().showText("CLEAR", 500, 700);
         }
     }
     
