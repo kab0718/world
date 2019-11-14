@@ -32,13 +32,16 @@ public class cab extends Actor
         }else if(flag == 0){
             setLocation(x+1, y+r.nextInt(15)-r.nextInt(15));
         }
-        
-        Actor actor = getOneObjectAtOffset(0, 0, Bullet.class);
+        Actor actor = getOneObjectAtOffset(0,0, Bullet.class);
         if(actor != null){
             count++;
+            getWorld().removeObject( actor );
+
         }
-        if(count == 30){
+        if(count == 5){
             getWorld().showText("CLEAR", 500, 700);
+            getWorld().removeObject( this );
+            Greenfoot.stop();
         }
     }
     
