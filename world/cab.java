@@ -21,6 +21,7 @@ public class cab extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
+        int e = 980;
         if(x < 1000 && x > 950){
             flag = 1;
         }else if(x == 20){
@@ -33,12 +34,15 @@ public class cab extends Actor
             setLocation(x+1, y+r.nextInt(15)-r.nextInt(15));
         }
         Actor actor = getOneObjectAtOffset(0,0, Bullet.class);
+        Actor hato = getOneObjectAtOffset(0,0, hato.class);
         if(actor != null){
             count++;
+            e = e - (count*32);
             getWorld().removeObject( actor );
+            getWorld().addObject( new dele(), e, 17 );
 
         }
-        if(count == 5){
+        if(count == 30){
             getWorld().showText("CLEAR", 500, 700);
             getWorld().removeObject( this );
             Greenfoot.stop();
