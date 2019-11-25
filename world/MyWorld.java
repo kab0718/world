@@ -21,7 +21,7 @@ public class MyWorld extends World
         addObject( new Pompei(), 500,700 );
         addObject( new Tweet(), 500,500 );
         for(int i=20;i<949;i+=32){
-        addObject( new hato(), i,16 );        
+            addObject( new hato(), i,16 );        
         }     
 
     }
