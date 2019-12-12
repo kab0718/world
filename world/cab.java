@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.Random;
 
@@ -22,6 +23,8 @@ public class cab extends Actor
         int x = getX();
         int y = getY();
         int e = 980;
+        int tate=0,yoko=0,n=0,hou=0,a=0;
+       
         if(x < 1000 && x > 950){
             flag = 1;
         }else if(x == 20){
@@ -40,7 +43,16 @@ public class cab extends Actor
             e = e - (count*32);
             getWorld().removeObject( actor );
             getWorld().addObject( new dele(), e, 17 );
-
+            if(r.nextInt(2)==0){
+                yoko = r.nextInt(2);
+                tate = r.nextInt(801); 
+                yoko = yoko * 1000;    
+                tw(yoko,tate);
+            }else{
+                yoko = r.nextInt(1001);
+                tate = 800;
+                tw(yoko,tate);
+            }
         }
         if(count == 30){
             getWorld().showText("CLEAR", 500, 700);
@@ -48,5 +60,38 @@ public class cab extends Actor
             Greenfoot.stop();
         }
     }
-    
+
+    public void tw(int yoko,int tate)
+    {
+        int hou=0;
+        if(yoko==0){
+            hou = r.nextInt(5);
+        }else if(yoko == 1000){
+            hou = r.nextInt(5)+4;
+        }else if(tate == 0){
+            hou = r.nextInt(5)+2;
+        }else if(tate == 800){
+            hou = r.nextInt(5);
+            if(hou!=0&&hou!=1&&hou!=2){
+                hou += 3;
+            }
+        }
+        if(hou==0){
+            getWorld().addObject( new up(), yoko, tate );
+        }else if(hou==1){
+            getWorld().addObject( new upr(), yoko, tate );
+        }else if(hou==2){
+            getWorld().addObject( new r(), yoko, tate );
+        }else if(hou==3){
+            getWorld().addObject( new downr(), yoko, tate );    
+        }else if(hou==4){
+            getWorld().addObject( new down(), yoko, tate );
+        }else if(hou==5){
+            getWorld().addObject( new downl(), yoko, tate );
+        }else if(hou==6){
+            getWorld().addObject( new l(), yoko, tate );    
+        }else if(hou==7){
+            getWorld().addObject( new upl(), yoko, tate );    
+        }
+    }
 }

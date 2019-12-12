@@ -14,6 +14,6 @@ public class dele extends Actor
      */
     public void act() 
     {
-        getImage().scale( 30,30 );
+        //getImage().scale( 30,30 );
     }    
 }

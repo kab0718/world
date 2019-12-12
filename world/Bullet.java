@@ -18,10 +18,10 @@ public class Bullet extends Actor
         int y = getY();
      setLocation( x,y-6 );
      Actor actor = getOneObjectAtOffset( 0, 0, cab.class );
-     Actor mama = getOneObjectAtOffset( 0, 0, Tweet.class );
+     Actor mama = getOneObjectAtOffset( 0, 0, tweet.class );
      if(y==0 || mama != null){
          getWorld().removeObject( this ); 
         }   
     }
 }
-//|| actor != null
+//|| actor != nul
