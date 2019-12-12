@@ -14,6 +14,6 @@ public class hato extends Actor
      */
     public void act() 
     {
-        //getImage().scale( 20,20 );
+        getImage().scale( 20,20 );
     }    
 }
