@@ -16,6 +16,7 @@ public class cab extends Actor
      */
     int flag = 0;
     int count = 0;
+    int shoot = 0;
     Random r = new Random();
     public void act() 
     {
@@ -24,17 +25,24 @@ public class cab extends Actor
         int y = getY();
         int e = 980;
         int tate=0,yoko=0,n=0,hou=0,a=0;
-       
+        shoot++;
         if(x < 1000 && x > 950){
             flag = 1;
         }else if(x == 20){
             flag = 0;
         }
-        
+            if(shoot==100){
+            shoot=0;
+            yoko = r.nextInt(1001);
+            tate = 0;
+            tw(yoko,tate);
+            }
+          
+            
         if(flag == 1){
-            setLocation(x-1, y+r.nextInt(15)-r.nextInt(15));
+            setLocation(x-1, y+r.nextInt(20)-r.nextInt(20));
         }else if(flag == 0){
-            setLocation(x+1, y+r.nextInt(15)-r.nextInt(15));
+            setLocation(x+1, y+r.nextInt(20)-r.nextInt(20));
         }
         Actor actor = getOneObjectAtOffset(0,0, Bullet.class);
         Actor hato = getOneObjectAtOffset(0,0, hato.class);
@@ -50,7 +58,7 @@ public class cab extends Actor
                 tw(yoko,tate);
             }else{
                 yoko = r.nextInt(1001);
-                tate = 800;
+                tate = 0;
                 tw(yoko,tate);
             }
         }

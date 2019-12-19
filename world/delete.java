@@ -1,19 +1,19 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class hato here.
+ * Write a description of class delete here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class hato extends Actor
+public class delete extends Actor
 {
     /**
-     * Act - do whatever the hato wants to do. This method is called whenever
+     * Act - do whatever the delete wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        //getImage().scale( 20,20 );
+        getImage().scale( 60,60 );
     }    
 }
