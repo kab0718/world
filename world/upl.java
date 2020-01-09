@@ -6,7 +6,7 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class upl extends tweet
+public class upl extends Tweet
 {
     /**
      * Act - do whatever the lup wants to do. This method is called whenever

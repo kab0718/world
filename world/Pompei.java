@@ -38,7 +38,7 @@ public class Pompei extends Actor
             }
         }
         Actor actor = getOneObjectAtOffset( 0, 0, cab.class );
-        Actor mama = getOneObjectAtOffset( 0, 0, tweet.class );
+        Actor mama = getOneObjectAtOffset( 0, 0, Tweet.class );
         if(actor != null|| mama != null){
             if(count>50 ){
                 count = 0;

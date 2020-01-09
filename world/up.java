@@ -6,7 +6,7 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class up extends tweet
+public class up extends Tweet
 {
     /**
      * Act - do whatever the a wants to do. This method is called whenever
