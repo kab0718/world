@@ -40,10 +40,17 @@ public class cab extends Actor
           
             
         if(flag == 1){
-            setLocation(x-1, y+r.nextInt(20)-r.nextInt(20));
+            if(y < 750){
+                setLocation(x-1, y+r.nextInt(20)-r.nextInt(20));
+            }else{
+                setLocation(x-1, y+r.nextInt(20)+r.nextInt(20));
+            }
         }else if(flag == 0){
-            setLocation(x+1, y+r.nextInt(20)-r.nextInt(20));
-        }
+            if(y < 750){
+                setLocation(x+1, y+r.nextInt(20)-r.nextInt(20));
+            }else{
+                setLocation(x+1, y+r.nextInt(20)+r.nextInt(20));
+            }        }
         Actor actor = getOneObjectAtOffset(0,0, Bullet.class);
         Actor hato = getOneObjectAtOffset(0,0, hato.class);
         if(actor != null){
