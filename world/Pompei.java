@@ -13,7 +13,7 @@ public class Pompei extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int count = 0;
-    private int life = 0;
+    private int l = 0;
     private int flag_tama = 0;
     public void act() 
     {
@@ -42,9 +42,9 @@ public class Pompei extends Actor
         if(actor != null|| mama != null){
             if(count>50 ){
                 count = 0;
-                life++;
-                getWorld().addObject( new delete(), e-(life*55), 780 );
-            }if(life == 3){
+                l++;
+                getWorld().addObject( new delete(), e-(l*55), 780 );
+            }if(l == 3){
             getWorld().showText( "GAME OVER", 100, 150 );
             getWorld().removeObject( this );
             Greenfoot.stop();
