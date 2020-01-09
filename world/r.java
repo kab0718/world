@@ -7,7 +7,7 @@ import java.util.Random;
  * @version (a version number or a date)
  */
 
-public class r extends tweet
+public class r extends Tweet
 {
     /**
      * Act - do whatever the c wants to do. This method is called whenever
