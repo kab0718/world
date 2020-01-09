@@ -17,6 +17,9 @@ public class cab extends Actor
     int flag = 0;
     int count = 0;
     int shoot = 0;
+    int mutek = 15;
+    GreenfootImage img  = null;
+    GreenfootImage damege  = null;
     Random r = new Random();
     public void act() 
     {
@@ -26,6 +29,13 @@ public class cab extends Actor
         int e = 980;
         int tate=0,yoko=0,n=0,hou=0,a=0;
         shoot++;
+        mutek++;
+        img = new GreenfootImage( "images/icon.jpg" );
+        damege = new GreenfootImage( "images/dele.jpg" );
+        
+        
+
+        
         if(x < 1000 && x > 950){
             flag = 1;
         }else if(x == 20){
@@ -53,8 +63,10 @@ public class cab extends Actor
             }        }
         Actor actor = getOneObjectAtOffset(0,0, Bullet.class);
         Actor hato = getOneObjectAtOffset(0,0, hato.class);
-        if(actor != null){
+        Actor skil = getOneObjectAtOffset(0,0, skillup.class);
+        if((actor != null||skil != null)&&mutek>10){
             count++;
+            mutek = 0;
             e = e - (count*32);
             getWorld().removeObject( actor );
             getWorld().addObject( new dele(), e, 17 );
@@ -69,10 +81,17 @@ public class cab extends Actor
                 tw(yoko,tate);
             }
         }
-        if(count == 30){
+        if(count == 20){
             getWorld().showText("CLEAR", 500, 700);
             getWorld().removeObject( this );
             Greenfoot.stop();
+        }
+        if(mutek<13 ){
+            if(mutek==4||mutek==12){
+                setImage(img);
+            }else if(mutek==1||mutek==8){
+                setImage(damege);
+            }
         }
     }
 

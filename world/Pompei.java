@@ -15,6 +15,7 @@ public class Pompei extends Actor
     private int count = 50;
     private int l = 0;
     private int flag_tama = 0;
+    private int skil = 0;
     GreenfootImage img  = null;
     GreenfootImage damege  = null;
     public void act() 
@@ -33,6 +34,9 @@ public class Pompei extends Actor
             setLocation( x,y-6 );
         }if( Greenfoot.isKeyDown( "down" ) ){
             setLocation( x,y+6 );
+        }if( Greenfoot.isKeyDown( "v" ) && 0 < skil&&flag_tama == 0 ){
+                getWorld().addObject( new skillup(), x+150, y-200 );
+                skil--;
         }        
         if( flag_tama > 0 ) flag_tama--;
         if( Greenfoot.isKeyDown( "space" ) ){
@@ -54,7 +58,9 @@ public class Pompei extends Actor
             if(count>50 ){
                 count = 0;
                 l++;
+                skil++;
                 getWorld().addObject( new delete(), e-(l*55), 780 );
+                getWorld().addObject( new skill(), e-(l*55), 780 );
             }if(l == 3){
             getWorld().showText( "GAME OVER", 100, 150 );
             getWorld().removeObject( this );
