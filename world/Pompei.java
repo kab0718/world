@@ -12,14 +12,18 @@ public class Pompei extends Actor
      * Act - do whatever the Pompei wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    private int count = 0;
+    private int count = 50;
     private int l = 0;
     private int flag_tama = 0;
+    GreenfootImage img  = null;
+    GreenfootImage damege  = null;
     public void act() 
     {
         int x = getX();
         int y = getY();
         int e = 195;
+        img = new GreenfootImage( "images/baby1.png" );
+        damege = new GreenfootImage( "images/dele.jpg" );
         count ++;
         if( Greenfoot.isKeyDown( "left" ) ){
             setLocation( x-6,y );
@@ -35,6 +39,13 @@ public class Pompei extends Actor
             if( flag_tama == 0 ){
                 getWorld().addObject( new Bullet(), getX(), getY() );
                 flag_tama = 10;
+            }
+        }
+        if(count<50 ){
+            if(count==10||count==30||count==49){
+                setImage(img);
+            }else if(count==1||count==20||count==40){
+                setImage(damege);
             }
         }
         Actor actor = getOneObjectAtOffset( 0, 0, cab.class );
