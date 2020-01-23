@@ -14,6 +14,7 @@
      */
     private int counter = 50;
     static public int l = 0;
+    static public int s = 0;
     private int flag_tama = 0;
     private int flag_skill = 0;
     static public int skil = 0;
@@ -35,6 +36,7 @@
         }if( Greenfoot.isKeyDown( "down" ) ){
             setLocation( x,y+6 );
         }if( Greenfoot.isKeyDown( "v" ) && 0 < skil&&flag_skill == 0 ){
+                s++;
                 getWorld().addObject( new skillup(), x+150, y-200 );
                 skil--;
                 flag_skill = 17;
@@ -59,9 +61,11 @@
                 counter = 0;
                 l++;
                 skil++;
-                getWorld().addObject( new skill(), e-(l*55), 780 );
+                if(l==1)getWorld().addObject( new skill1(), 140, 780 );
+                if(l==2)getWorld().addObject( new skill2(), 85, 780 );
             }if(l == 3){
                 l = 0;
+                s = 0;
                 cab.count = 0;
                 skil = 0;
                 World Myworld = new Death();

@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class skill extends Actor
+public class skill1 extends Actor
 {
     /**
      * Act - do whatever the skill wants to do. This method is called whenever
@@ -15,5 +15,6 @@ public class skill extends Actor
     public void act() 
     {
         getImage().scale( 40,40 );
+        if(Pompei.s == 1)getWorld().removeObject( this );
     }    
 }
