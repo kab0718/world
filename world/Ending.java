@@ -16,6 +16,16 @@ public class Ending extends World
     public Ending()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(1000, 800, 1); 
+        super(1000, 800, 1);
+        showText( "GANE CLEAR", 500, 400 );
+        showText( "PUSH Q TO RESTART", 500, 420 );
+    }
+    
+    public void act()
+    {
+        if( Greenfoot.isKeyDown( "Q" ) ){
+            World Myworld = new Opening();
+            Greenfoot.setWorld( Myworld );
+        }
     }
 }

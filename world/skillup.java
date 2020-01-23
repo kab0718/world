@@ -16,7 +16,7 @@ public class skillup extends Actor
     public void act() 
     {
         setRotation(-90);
-        move(r.nextInt(4)+10);
+        move(r.nextInt(4)+8);
         int y = getY();
         if(y==0){
          getWorld().removeObject( this ); 

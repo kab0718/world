@@ -16,11 +16,11 @@ public class Bullet extends Actor
     {
         int x = getX();
         int y = getY();
-     setLocation( x,y-6 );
-     Actor actor = getOneObjectAtOffset( 0, 0, cab.class );
-     Actor mama = getOneObjectAtOffset( 0, 0, Tweet.class );
-     if(y==0 || mama != null){
-         getWorld().removeObject( this ); 
+        setLocation( x,y-6 );
+        Actor actor = getOneObjectAtOffset( 0, 0, cab.class );
+        Actor mama = getOneObjectAtOffset( 0, 0, Tweet.class );
+        if(y==0 || mama != null){
+             getWorld().removeObject( this ); 
         }   
     }
 }

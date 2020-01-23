@@ -21,10 +21,10 @@ public class MyWorld extends World
         addObject( new Pompei(), 500,700 );
         //addObject( new Tweet(), 500,500 );
         for(int i=20;i<641;i+=32){
-            addObject( new hato(), i,16 );        
+            addObject( new hato(20-(i-20)/32), i,16 );        
         } 
         for(int i=30;i<150;i+=55){
-            addObject( new life(), i,776 );        
+            addObject( new life(30-(i-30)/55), i,776 );        
         } 
 
     }

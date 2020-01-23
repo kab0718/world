@@ -15,9 +15,9 @@ public class cab extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     int flag = 0;
-    int count = 0;
+    static public int count = 0;
     int shoot = 0;
-    int mutek = 15;
+    int mutek = 10;
     GreenfootImage img  = null;
     GreenfootImage damege  = null;
     Random r = new Random();
@@ -26,29 +26,23 @@ public class cab extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
-        int e = 980;
+        int e = 692;
         int tate=0,yoko=0,n=0,hou=0,a=0;
         shoot++;
         mutek++;
         img = new GreenfootImage( "images/icon.jpg" );
         damege = new GreenfootImage( "images/dele.jpg" );
-        
-        
-
-        
         if(x < 1000 && x > 950){
             flag = 1;
         }else if(x == 20){
             flag = 0;
         }
-            if(shoot==100){
+        if(shoot==100){
             shoot=0;
             yoko = r.nextInt(1001);
             tate = 0;
             tw(yoko,tate);
-            }
-          
-            
+        }    
         if(flag == 1){
             if(y < 750){
                 setLocation(x-1, y+r.nextInt(20)-r.nextInt(20));
@@ -60,16 +54,17 @@ public class cab extends Actor
                 setLocation(x+1, y+r.nextInt(20)-r.nextInt(20));
             }else{
                 setLocation(x+1, y+r.nextInt(20)+r.nextInt(20));
-            }        }
+            }
+        }
         Actor actor = getOneObjectAtOffset(0,0, Bullet.class);
         Actor hato = getOneObjectAtOffset(0,0, hato.class);
         Actor skil = getOneObjectAtOffset(0,0, skillup.class);
-        if((actor != null||skil != null)&&mutek>10){
+        if((actor != null||skil != null)&&mutek>8){
             count++;
             mutek = 0;
             e = e - (count*32);
             getWorld().removeObject( actor );
-            getWorld().addObject( new dele(), e, 17 );
+            //getWorld().addObject( new dele(), e, 17 );
             if(r.nextInt(2)==0){
                 yoko = r.nextInt(2);
                 tate = r.nextInt(801); 
@@ -82,14 +77,13 @@ public class cab extends Actor
             }
         }
         if(count == 20){
-            getWorld().showText("CLEAR", 500, 700);
-            getWorld().removeObject( this );
-            Greenfoot.stop();
+            World Myworld = new Ending();
+            Greenfoot.setWorld( Myworld );
         }
-        if(mutek<13 ){
-            if(mutek==4||mutek==12){
+        if(mutek<10 ){
+            if(mutek==4){
                 setImage(img);
-            }else if(mutek==1||mutek==8){
+            }else if(mutek==1){
                 setImage(damege);
             }
         }

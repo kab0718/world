@@ -22,9 +22,11 @@ public class Opening extends World
     
     public void act()
     {
+        started();
         if( Greenfoot.isKeyDown( "Enter" ) ){
             World Myworld = new MyWorld();
             Greenfoot.setWorld( Myworld );
         }
+
     }
 }

@@ -12,8 +12,16 @@ public class life extends Actor
      * Act - do whatever the life wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    static int b;
+    life(int i){
+        b = i;
+    }
+    
     public void act() 
     {
-        // Add your action code here.
-    }    
+        if(b == Pompei.l){
+            getWorld().removeObject( this );
+        }
+        //getImage().scale( 20,20 );
+    } 
 }
