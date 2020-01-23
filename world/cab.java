@@ -77,6 +77,9 @@ public class cab extends Actor
             }
         }
         if(count == 20){
+            count = 0;
+            Pompei.l = 0;
+            Pompei.skil = 0;
             World Myworld = new Ending();
             Greenfoot.setWorld( Myworld );
         }

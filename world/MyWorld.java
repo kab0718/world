@@ -24,7 +24,7 @@ public class MyWorld extends World
             addObject( new hato(20-(i-20)/32), i,16 );        
         } 
         for(int i=30;i<150;i+=55){
-            addObject( new life(30-(i-30)/55), i,776 );        
+            addObject( new life(3-(i-30)/55), i,776 );        
         } 
 
     }

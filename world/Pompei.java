@@ -16,7 +16,7 @@
     static public int l = 0;
     private int flag_tama = 0;
     private int flag_skill = 0;
-    private int skil = 0;
+    static public int skil = 0;
     GreenfootImage img  = null;
     GreenfootImage damege  = null;
     public void act(){
@@ -61,19 +61,14 @@
                 skil++;
                 getWorld().addObject( new skill(), e-(l*55), 780 );
             }if(l == 3){
-            //getWorld().removeObject( this );
-            l = 0;
-            cab.count = 0;
-            skil = 0;
-            World Myworld = new Death();
-            Greenfoot.setWorld( Myworld ); 
+                l = 0;
+                cab.count = 0;
+                skil = 0;
+                World Myworld = new Death();
+                Greenfoot.setWorld( Myworld ); 
             }
-            
-            
         }
     }
-        
-
 } 
    
 
