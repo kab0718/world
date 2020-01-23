@@ -6,7 +6,7 @@ import java.util.Random;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class skillup extends Tweet
+public class skillup extends Actor
 {
     /**
      * Act - do whatever the skillup wants to do. This method is called whenever

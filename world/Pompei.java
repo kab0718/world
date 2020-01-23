@@ -62,9 +62,9 @@ public class Pompei extends Actor
                 getWorld().addObject( new delete(), e-(l*55), 780 );
                 getWorld().addObject( new skill(), e-(l*55), 780 );
             }if(l == 3){
-            getWorld().showText( "GAME OVER", 100, 150 );
-            getWorld().removeObject( this );
-            Greenfoot.stop();
+            //getWorld().removeObject( this );
+            World Myworld = new Death();
+            Greenfoot.setWorld( Myworld );
             }
             
         }
