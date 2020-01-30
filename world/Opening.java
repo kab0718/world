@@ -17,7 +17,8 @@ public class Opening extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1);
-        showText( "PUSH ENTER TO START", 500, 420 );
+        addObject( new rogo(), 500,400 );
+        showText( "PUSH ENTER TO START", 500, 680 );
     }
     
     public void act()
