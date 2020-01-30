@@ -36,6 +36,7 @@
         }if( Greenfoot.isKeyDown( "down" ) ){
             setLocation( x,y+6 );
         }if( Greenfoot.isKeyDown( "v" ) && 0 < skil&&flag_skill == 0 ){
+                Greenfoot.playSound( "sounds/skil.mp3" );
                 s++;
                 getWorld().addObject( new skillup(), x+150, y-200 );
                 skil--;
@@ -44,6 +45,7 @@
         if( flag_tama > 0 ) flag_tama--;
         if( flag_skill > 0 ) flag_skill--;
         if( Greenfoot.isKeyDown( "space" )&&flag_tama == 0 ){
+            Greenfoot.playSound( "sounds/shot1.mp3" );
             getWorld().addObject( new Bullet(), getX(), getY() );
             flag_tama = 10;
         }
@@ -58,12 +60,15 @@
         Actor mama = getOneObjectAtOffset( 0, 0, Tweet.class );
         if(actor != null|| mama != null){
             if(counter>50 ){
+                Greenfoot.playSound( "sounds/damage01.wav" );
                 counter = 0;
                 l++;
                 skil++;
                 if(l==1)getWorld().addObject( new skill1(), 140, 780 );
                 if(l==2)getWorld().addObject( new skill2(), 85, 780 );
-            }if(l == 3){
+            }
+            if(l == 3){
+                Greenfoot.playSound( "sounds/metsu.wav" );
                 l = 0;
                 s = 0;
                 cab.count = 0;

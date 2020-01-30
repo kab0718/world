@@ -1,13 +1,13 @@
-
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.Random;
-
-/**
- * Write a description of class cab here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+    
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import java.util.Random;
+    
+    /**
+     * Write a description of class cab here.
+     * 
+     * @author (your name) 
+     * @version (a version number or a date)
+     */
 public class cab extends Actor
 {
     /**
@@ -37,7 +37,7 @@ public class cab extends Actor
         }else if(x == 20){
             flag = 0;
         }
-        if(shoot==100){
+        if(shoot==50){
             shoot=0;
             yoko = r.nextInt(1001);
             tate = 0;
@@ -60,11 +60,11 @@ public class cab extends Actor
         Actor hato = getOneObjectAtOffset(0,0, hato.class);
         Actor skil = getOneObjectAtOffset(0,0, skillup.class);
         if((actor != null||skil != null)&&mutek>8){
+            Greenfoot.playSound( "sounds/damage02.wav" );
             count++;
             mutek = 0;
             e = e - (count*32);
             getWorld().removeObject( actor );
-            //getWorld().addObject( new dele(), e, 17 );
             if(r.nextInt(2)==0){
                 yoko = r.nextInt(2);
                 tate = r.nextInt(801); 
