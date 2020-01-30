@@ -13,6 +13,7 @@ class.hato.image=haato.png
 class.l.image=\u6027\u7656.jpg
 class.life.image=heart.png
 class.r.image=\u5B50\u5BAEb.jpg
+class.rogo.image=touka\ (1).png
 class.skill1.image=skill.png
 class.skill2.image=skill.png
 class.skillup.image=\u677Fpai.jpg
@@ -20,7 +21,7 @@ class.up.image=\u58F0\u512A\u3068\u3048\u3063\u3061\u00D72.jpg
 class.upl.image=\u5B50\u5BAEc.jpg
 class.upr.image=\u304A\u306D\u30B7\u30E7\u30BF.jpg
 dependency1.from=Opening
-dependency1.to=MyWorld
+dependency1.to=rogo
 dependency1.type=UsesDependency
 dependency10.from=Bullet
 dependency10.to=Tweet
@@ -52,8 +53,8 @@ dependency18.type=UsesDependency
 dependency19.from=cab
 dependency19.to=l
 dependency19.type=UsesDependency
-dependency2.from=Death
-dependency2.to=Opening
+dependency2.from=Opening
+dependency2.to=MyWorld
 dependency2.type=UsesDependency
 dependency20.from=cab
 dependency20.to=upl
@@ -85,7 +86,7 @@ dependency28.type=UsesDependency
 dependency29.from=Pompei
 dependency29.to=skill1
 dependency29.type=UsesDependency
-dependency3.from=Ending
+dependency3.from=Death
 dependency3.to=Opening
 dependency3.type=UsesDependency
 dependency30.from=Pompei
@@ -101,7 +102,11 @@ dependency33.from=Pompei
 dependency33.to=Tweet
 dependency33.type=UsesDependency
 dependency4.from=Ending
+<<<<<<< HEAD
 dependency4.to=MyWorld
+=======
+dependency4.to=Opening
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 dependency4.type=UsesDependency
 dependency5.from=MyWorld
 dependency5.to=cab
@@ -120,11 +125,19 @@ dependency9.to=cab
 dependency9.type=UsesDependency
 editor.fx.0.height=713
 editor.fx.0.width=815
+<<<<<<< HEAD
 editor.fx.0.x=84
 editor.fx.0.y=94
 height=1001
 package.numDependencies=33
 package.numTargets=24
+=======
+editor.fx.0.x=869
+editor.fx.0.y=270
+height=1001
+package.numDependencies=33
+package.numTargets=22
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -147,70 +160,110 @@ target1.width=80
 target1.x=0
 target1.y=0
 target10.height=50
+<<<<<<< HEAD
 target10.name=skill2
+=======
+target10.name=rogo
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=80
 target10.x=0
 target10.y=0
 target11.height=50
+<<<<<<< HEAD
 target11.name=dele
+=======
+target11.name=skillup
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=80
 target11.x=0
 target11.y=0
 target12.height=50
+<<<<<<< HEAD
 target12.name=Opening
+=======
+target12.name=r
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=80
 target12.x=0
 target12.y=0
 target13.height=50
+<<<<<<< HEAD
 target13.name=up
+=======
+target13.name=skill1
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=80
 target13.x=0
 target13.y=0
 target14.height=50
+<<<<<<< HEAD
 target14.name=MyWorld
+=======
+target14.name=skill2
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=80
 target14.x=0
 target14.y=0
 target15.height=50
+<<<<<<< HEAD
 target15.name=Bullet
+=======
+target15.name=Opening
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target15.showInterface=false
 target15.type=ClassTarget
 target15.width=80
 target15.x=0
 target15.y=0
 target16.height=50
+<<<<<<< HEAD
 target16.name=downr
+=======
+target16.name=Pompei
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=80
 target16.x=0
 target16.y=0
 target17.height=50
+<<<<<<< HEAD
 target17.name=l
+=======
+target17.name=upr
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=80
 target17.x=0
 target17.y=0
 target18.height=50
+<<<<<<< HEAD
 target18.name=upl
+=======
+target18.name=Death
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target18.showInterface=false
 target18.type=ClassTarget
-target18.width=80
+target18.width=90
 target18.x=0
 target18.y=0
 target19.height=50
+<<<<<<< HEAD
 target19.name=r
+=======
+target19.name=up
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=80
@@ -224,20 +277,29 @@ target2.width=80
 target2.x=0
 target2.y=0
 target20.height=50
+<<<<<<< HEAD
 target20.name=Pompei
+=======
+target20.name=Ending
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target20.showInterface=false
 target20.type=ClassTarget
 target20.width=80
 target20.x=0
 target20.y=0
 target21.height=50
+<<<<<<< HEAD
 target21.name=upr
+=======
+target21.name=MyWorld
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=80
 target21.x=0
 target21.y=0
 target22.height=50
+<<<<<<< HEAD
 target22.name=Death
 target22.showInterface=false
 target22.type=ClassTarget
@@ -258,6 +320,14 @@ target24.type=ClassTarget
 target24.width=80
 target24.x=0
 target24.y=0
+=======
+target22.name=downl
+target22.showInterface=false
+target22.type=ClassTarget
+target22.width=80
+target22.x=0
+target22.y=0
+>>>>>>> 47abc428dbe5fd89cbef5eae47a5a117be5a9689
 target3.height=50
 target3.name=Tweet
 target3.showInterface=false

@@ -38,6 +38,7 @@ public class cab extends Actor
             flag = 0;
         }
         if(shoot==50){
+            Greenfoot.playSound( "sounds/ene.wav" );
             shoot=0;
             yoko = r.nextInt(1001);
             tate = 0;
@@ -65,6 +66,7 @@ public class cab extends Actor
             mutek = 0;
             e = e - (count*32);
             getWorld().removeObject( actor );
+            Greenfoot.playSound( "sounds/ene.wav" );
             if(r.nextInt(2)==0){
                 yoko = r.nextInt(2);
                 tate = r.nextInt(801); 
