@@ -19,6 +19,7 @@ public class Ending extends World
         super(1000, 800, 1);
         showText( "GANE CLEAR", 500, 400 );
         showText( "PUSH Q TO RESTART", 500, 420 );
+        MyWorld.sound.stop();
     }
     
     public void act()
